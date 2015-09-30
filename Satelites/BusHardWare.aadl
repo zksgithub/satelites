@@ -1,0 +1,30 @@
+package BusHardware
+
+public with SEI;
+
+processor Real_Time
+	features
+		BA2 : requires bus access Inter_bus.Standard;
+end Real_Time;
+
+processor implementation Real_Time.one_GHz
+properties 
+	SEI::MIPSCapacity => 1.0 gips;
+end Real_Time.one_GHz;
+
+memory RAM
+	features
+		BA2 : requires bus access Inter_bus.Standard;
+end RAM;
+
+memory implementation RAM.Standard
+end RAM.Standard;
+
+bus Inter_bus
+end Inter_bus;
+
+bus implementation Inter_bus.Standard
+    
+end Inter_bus.Standard;
+
+end BusHardware;

@@ -1,0 +1,48 @@
+package BUSComponents
+
+public with busHardware;
+
+device CMU
+features
+	proc_out_data : out data port;
+	proc_in_data : in data port;
+	bc_out_data : out data port;
+	bc_in_data : in data port;
+	proc_cmd : in event port;
+	bc_cmd : out event port;
+	BA1:requires bus access BUS_1553B.B;
+	BA2:requires bus access busHardware::inter_bus.standard;
+end CMU;
+
+device PFISU
+features
+    proc_out_data : out data port;
+	proc_in_data : in data port;
+	cmd : in event port;
+	BA1:requires bus access BUS_1553B.B;
+end PFISU;
+
+device PLISU
+features
+    proc_out_data : out data port;
+	proc_in_data : in data port;
+	cmd : in event port;
+	BA1:requires bus access BUS_1553B.B;
+end PLISU;
+
+device ADU
+features
+    proc_out_data : out data port;
+	proc_in_data : in data port;
+	cmd : in event port;
+	BA1:requires bus access BUS_1553B.B;
+end ADU;
+
+bus BUS_1553B
+end BUS_1553B;
+
+bus implementation BUS_1553B.B
+end BUS_1553B.B;
+
+
+end BUSComponents;

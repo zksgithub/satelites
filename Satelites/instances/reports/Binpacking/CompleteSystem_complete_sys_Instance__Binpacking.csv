@@ -1,0 +1,18 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning: Bus inter_bus is missing Transmission Time property. Using default of 1.0E-5
+Warning: Bus h_1553B is missing Transmission Time property. Using default of 1.0E-5
+Warning: Device BC is missing period property. Using default of 1 ns
+Warning: Device RT is missing period property. Using default of 1 ns
+Warning: Thread cmu_proc.t_obc is missing period property. Using default of 1 ns
+Warning: Thread cmu_proc.t_ec is missing period property. Using default of 1 ns
+Warning: Thread cmu_proc.t_obc is missing compute_execution_time or InstructionsPerDispatch property. Using default of 0 ns
+Warning: Thread cmu_proc.t_ec is missing compute_execution_time or InstructionsPerDispatch property. Using default of 0 ns
+
+Binpacking results for SOM cmu_proc.controlling: Success
+Processor complete_sys_Instance.cpu (1000.0 MIPS) Load: 0% Available: 100%
+
+Thread to Processor Bindings
+Thread complete_sys_Instance.cmu_proc.t_obc ==> Processor complete_sys_Instance.cpu Utilization 0.0%

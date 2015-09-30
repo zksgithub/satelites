@@ -1,0 +1,38 @@
+package aadl
+
+public with BUSComponents,BUSThread,BusHardware;
+
+
+system complete
+end complete;
+
+system implementation complete.sys
+subcomponents
+     BC : device BUSComponents::CMU;
+     cmu_proc: Process BUSThread::proc.cmu;
+     control_proc : Process BUSThread::control.impl;
+     RT: device BUSComponents::PFISU; 
+     cpu : processor BusHardware::Real_Time.one_GHz;
+     ram : memory BusHardware::ram.standard;
+     inter_bus : bus BusHardware::Inter_bus.Standard;
+     h_1553B : BUS BUSComponents::BUS_1553B.B;
+connections 
+    DC1 : port BC.proc_out_data ->  cmu_proc.proc_in_data; 
+    DC2 : port cmu_proc.proc_out_data -> bc.proc_in_data;
+    DC3:  port BC.bc_out_data -> RT.proc_in_data;
+    DC4 : port  RT.proc_out_data -> BC.bc_in_data;
+    EC1 : port control_proc.set_monitorMode -> cmu_proc.monitor;
+    EC2 : port control_proc.set_controlMode -> cmu_proc.control_on;
+    EC3 : port  cmu_proc.command-> BC.proc_cmd;
+    EC4 : port bc.bc_cmd -> rt.cmd;
+    BAC1: bus access  h_1553B <-> BC.BA1;
+    BAC2: bus access  h_1553B <->  RT.BA1;
+    BAC3: bus access inter_bus <-> cpu.BA2;
+    BAC4: bus access inter_bus <-> ram.BA2;
+    BAC5: bus access inter_bus<-> BC.BA2;
+end complete.sys;
+
+
+
+
+end aadl;

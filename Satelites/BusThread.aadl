@@ -1,0 +1,82 @@
+package BUSThread
+
+public with buscomponents;
+--文档中并未将这两者之间的区别给出，这里将OBC和EC视作等同作用
+thread OBC
+	features
+		proc_out_data : out data port;
+		proc_in_data: in data port;
+		mode_command : in event port;
+		command : out event port;
+		--health_data : out data port;
+end OBC;
+
+thread implementation OBC.control
+end OBC.control;
+
+thread EC
+	features
+		proc_out_data : out data port;
+		proc_in_data: in data port;
+		mode_command : in event port;
+		command : out event port;
+end EC;
+
+thread implementation EC.control
+end EC.control;
+
+--模式切换控制
+thread modeControl
+	features
+	    --health_data           : in data port;
+		set_controlMode : out event port;
+		set_monitorMode : out event port;
+end modeControl;
+
+thread implementation modeControl.control
+end modeControl.control;
+
+
+process control
+features
+	    --health_data           : in data port;
+		set_controlMode : out event port;
+		set_monitorMode : out event port;
+end control;
+
+process implementation control.impl
+end control.impl;
+
+
+process proc
+	features
+		proc_out_data : out data port;
+		proc_in_data: in data port;
+		command :  out event port;
+		monitor: in event port;
+		control_on : in event port;
+end proc;
+
+
+process implementation proc.cmu
+	subcomponents
+		t_obc : thread OBC.control in modes (controlling);
+		--t_modeControl : thread modeControl.control in modes (controlling);
+		t_ec : thread EC.control in modes(monitoring);
+	Connections 
+	   --DC1 : port t_obc.health_data-> t_modeControl.health_data;
+	   DC1: port t_obc.proc_out_data -> proc_out_data in modes(controlling);
+	   DC2: port t_ec.proc_out_data -> proc_out_data in modes(monitoring);
+	   DC3: port proc_in_data -> t_obc.proc_in_data in modes(controlling);
+	   DC4: port proc_in_data -> t_ec.proc_in_data in modes(monitoring);   
+	   EC1: port control_on->t_obc.mode_command  in modes(controlling); 
+	   EC2: port monitor -> t_ec.mode_command in modes (monitoring);
+	   EC3: port t_obc.command ->command  in modes(controlling);
+	   EC4: port t_ec.command ->command  in modes(monitoring);
+	modes
+	    controlling : initial mode;
+	    monitoring : mode;
+	    monitoring -[ control_on ]-> controlling;
+	    controlling -[monitor]-> monitoring;
+end proc.cmu;
+end BUSThread;

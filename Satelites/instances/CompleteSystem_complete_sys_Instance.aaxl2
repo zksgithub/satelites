@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" xmi:id="_hKfNoErUEeW3JpoJxHQ7dw" name="complete_sys_Instance" category="system">
+  <componentInstance xmi:id="_hKqz0ErUEeW3JpoJxHQ7dw" name="inter_bus" srcConnectionInstance="_hLiWgErUEeW3JpoJxHQ7dw _hLi9kErUEeW3JpoJxHQ7dw _hLjkoErUEeW3JpoJxHQ7dw" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.inter_bus"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hK1L4ErUEeW3JpoJxHQ7dw" name="h_1553B" srcConnectionInstance="_hLjkokrUEeW3JpoJxHQ7dw _hLjkpErUEeW3JpoJxHQ7dw" category="bus">
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.h_1553B"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hK7SgErUEeW3JpoJxHQ7dw" name="BC" category="device">
+    <featureInstance xmi:id="_hK9HsErUEeW3JpoJxHQ7dw" name="proc_out_data" srcConnectionInstance="_hLmn8ErUEeW3JpoJxHQ7dw _hLnPAErUEeW3JpoJxHQ7dw" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::CMU.proc_out_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9HsUrUEeW3JpoJxHQ7dw" name="proc_in_data" dstConnectionInstance="_hLq5YErUEeW3JpoJxHQ7dw _hLrgc0rUEeW3JpoJxHQ7dw">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::CMU.proc_in_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9HskrUEeW3JpoJxHQ7dw" name="bc_out_data" srcConnectionInstance="_hLn2EErUEeW3JpoJxHQ7dw" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::CMU.bc_out_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9Hs0rUEeW3JpoJxHQ7dw" name="bc_in_data" dstConnectionInstance="_hLpEMErUEeW3JpoJxHQ7dw">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::CMU.bc_in_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9HtErUEeW3JpoJxHQ7dw" name="proc_cmd" dstConnectionInstance="_hLrgcErUEeW3JpoJxHQ7dw _hLsHgErUEeW3JpoJxHQ7dw" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../BusComponents.aadl#BUSComponents::CMU.proc_cmd"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9HtUrUEeW3JpoJxHQ7dw" name="bc_cmd" srcConnectionInstance="_hLodIErUEeW3JpoJxHQ7dw" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../BusComponents.aadl#BUSComponents::CMU.bc_cmd"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9uwErUEeW3JpoJxHQ7dw" name="BA1" dstConnectionInstance="_hLjkokrUEeW3JpoJxHQ7dw" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../BusComponents.aadl#BUSComponents::CMU.BA1"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK9uwUrUEeW3JpoJxHQ7dw" name="BA2" dstConnectionInstance="_hLjkoErUEeW3JpoJxHQ7dw" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../BusComponents.aadl#BUSComponents::CMU.BA2"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.BC"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hK-V0ErUEeW3JpoJxHQ7dw" name="RT" category="device">
+    <featureInstance xmi:id="_hK-V0UrUEeW3JpoJxHQ7dw" name="proc_out_data" srcConnectionInstance="_hLpEMErUEeW3JpoJxHQ7dw" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::PFISU.proc_out_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK-V0krUEeW3JpoJxHQ7dw" name="proc_in_data" dstConnectionInstance="_hLn2EErUEeW3JpoJxHQ7dw">
+      <feature xsi:type="aadl2:DataPort" href="../BusComponents.aadl#BUSComponents::PFISU.proc_in_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK-V00rUEeW3JpoJxHQ7dw" name="cmd" dstConnectionInstance="_hLodIErUEeW3JpoJxHQ7dw" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../BusComponents.aadl#BUSComponents::PFISU.cmd"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hK-84ErUEeW3JpoJxHQ7dw" name="BA1" dstConnectionInstance="_hLjkpErUEeW3JpoJxHQ7dw" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../BusComponents.aadl#BUSComponents::PFISU.BA1"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.RT"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hK-84UrUEeW3JpoJxHQ7dw" name="ram" category="memory">
+    <featureInstance xmi:id="_hK_j8ErUEeW3JpoJxHQ7dw" name="BA2" dstConnectionInstance="_hLi9kErUEeW3JpoJxHQ7dw" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../BusHardWare.aadl#BusHardware::RAM.BA2"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.ram"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hLALAErUEeW3JpoJxHQ7dw" name="cmu_proc" category="process">
+    <featureInstance xmi:id="_hLJ8AErUEeW3JpoJxHQ7dw" name="proc_out_data" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::proc.proc_out_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hLJ8AUrUEeW3JpoJxHQ7dw" name="proc_in_data">
+      <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::proc.proc_in_data"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hLJ8AkrUEeW3JpoJxHQ7dw" name="command" category="eventPort" direction="out">
+      <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::proc.command"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hLJ8A0rUEeW3JpoJxHQ7dw" name="monitor" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::proc.monitor"/>
+    </featureInstance>
+    <featureInstance xmi:id="_hLJ8BErUEeW3JpoJxHQ7dw" name="control_on" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::proc.control_on"/>
+    </featureInstance>
+    <componentInstance xmi:id="_hLHfwkrUEeW3JpoJxHQ7dw" name="t_obc" category="thread" inMode="_hLFDgErUEeW3JpoJxHQ7dw">
+      <featureInstance xmi:id="_hLIt4ErUEeW3JpoJxHQ7dw" name="proc_out_data" srcConnectionInstance="_hLq5YErUEeW3JpoJxHQ7dw" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::OBC.proc_out_data"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLIt4UrUEeW3JpoJxHQ7dw" name="proc_in_data" dstConnectionInstance="_hLmn8ErUEeW3JpoJxHQ7dw">
+        <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::OBC.proc_in_data"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLIt4krUEeW3JpoJxHQ7dw" name="mode_command" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::OBC.mode_command"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLIt40rUEeW3JpoJxHQ7dw" name="command" srcConnectionInstance="_hLrgcErUEeW3JpoJxHQ7dw" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::OBC.command"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../BusThread.aadl#BUSThread::proc.cmu.t_obc"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance xmi:id="_hLIt5ErUEeW3JpoJxHQ7dw" name="t_ec" category="thread" inMode="_hLFDgUrUEeW3JpoJxHQ7dw">
+      <featureInstance xmi:id="_hLJU8ErUEeW3JpoJxHQ7dw" name="proc_out_data" srcConnectionInstance="_hLrgc0rUEeW3JpoJxHQ7dw" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::EC.proc_out_data"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLJU8UrUEeW3JpoJxHQ7dw" name="proc_in_data" dstConnectionInstance="_hLnPAErUEeW3JpoJxHQ7dw">
+        <feature xsi:type="aadl2:DataPort" href="../BusThread.aadl#BUSThread::EC.proc_in_data"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLJU8krUEeW3JpoJxHQ7dw" name="mode_command" category="eventPort">
+        <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::EC.mode_command"/>
+      </featureInstance>
+      <featureInstance xmi:id="_hLJU80rUEeW3JpoJxHQ7dw" name="command" srcConnectionInstance="_hLsHgErUEeW3JpoJxHQ7dw" category="eventPort" direction="out">
+        <feature xsi:type="aadl2:EventPort" href="../BusThread.aadl#BUSThread::EC.command"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../BusThread.aadl#BUSThread::proc.cmu.t_ec"/>
+      <index>0</index>
+    </componentInstance>
+    <modeInstance xmi:id="_hLFDgErUEeW3JpoJxHQ7dw" name="controlling" srcModeTransition="_hLHfwUrUEeW3JpoJxHQ7dw" dstModeTransition="_hLHfwErUEeW3JpoJxHQ7dw" initial="true">
+      <mode href="../BusThread.aadl#BUSThread::proc.cmu.controlling"/>
+    </modeInstance>
+    <modeInstance xmi:id="_hLFDgUrUEeW3JpoJxHQ7dw" name="monitoring" srcModeTransition="_hLHfwErUEeW3JpoJxHQ7dw" dstModeTransition="_hLHfwUrUEeW3JpoJxHQ7dw">
+      <mode href="../BusThread.aadl#BUSThread::proc.cmu.monitoring"/>
+    </modeInstance>
+    <modeTransitionInstance xmi:id="_hLHfwErUEeW3JpoJxHQ7dw" name="monitoring.control_on.controlling" destination="_hLFDgErUEeW3JpoJxHQ7dw" source="_hLFDgUrUEeW3JpoJxHQ7dw">
+      <modeTransition href="../BusThread.aadl#//@ownedPublicSection/@ownedClassifier.7/@ownedModeTransition.0"/>
+    </modeTransitionInstance>
+    <modeTransitionInstance xmi:id="_hLHfwUrUEeW3JpoJxHQ7dw" name="controlling.monitor.monitoring" destination="_hLFDgUrUEeW3JpoJxHQ7dw" source="_hLFDgErUEeW3JpoJxHQ7dw">
+      <modeTransition href="../BusThread.aadl#//@ownedPublicSection/@ownedClassifier.7/@ownedModeTransition.1"/>
+    </modeTransitionInstance>
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.cmu_proc"/>
+    <index>0</index>
+  </componentInstance>
+  <componentInstance xmi:id="_hLJ8BUrUEeW3JpoJxHQ7dw" name="cpu" category="processor">
+    <ownedPropertyAssociation xmi:id="_hL6xAErUEeW3JpoJxHQ7dw">
+      <property href="../../Plugin_Resources/SEI.aadl#SEI::MIPSCapacity"/>
+      <ownedValue xmi:id="_hL7_IErUEeW3JpoJxHQ7dw">
+        <ownedValue xsi:type="aadl2:RealLiteral" xmi:id="_hL7_IUrUEeW3JpoJxHQ7dw" value="1.0">
+          <unit href="../../Plugin_Resources/SEI.aadl#SEI::Processor_Speed_Units.GIPS"/>
+        </ownedValue>
+      </ownedValue>
+    </ownedPropertyAssociation>
+    <featureInstance xmi:id="_hLKjEErUEeW3JpoJxHQ7dw" name="BA2" dstConnectionInstance="_hLiWgErUEeW3JpoJxHQ7dw" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../BusHardWare.aadl#BusHardware::Real_Time.BA2"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../CompleteSystem.aadl#aadl::complete.sys.cpu"/>
+    <index>0</index>
+  </componentInstance>
+  <connectionInstance xmi:id="_hLiWgErUEeW3JpoJxHQ7dw" name="inter_bus -> cpu.BA2" complete="true" kind="accessConnection" destination="_hLKjEErUEeW3JpoJxHQ7dw" bidirectional="true" source="_hKqz0ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLiWgUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hKqz0ErUEeW3JpoJxHQ7dw" destination="_hLKjEErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:AccessConnection" href="../CompleteSystem.aadl#aadl::complete.sys.BAC3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLi9kErUEeW3JpoJxHQ7dw" name="inter_bus -> ram.BA2" complete="true" kind="accessConnection" destination="_hK_j8ErUEeW3JpoJxHQ7dw" bidirectional="true" source="_hKqz0ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLi9kUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hKqz0ErUEeW3JpoJxHQ7dw" destination="_hK_j8ErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:AccessConnection" href="../CompleteSystem.aadl#aadl::complete.sys.BAC4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLjkoErUEeW3JpoJxHQ7dw" name="inter_bus -> BC.BA2" complete="true" kind="accessConnection" destination="_hK9uwUrUEeW3JpoJxHQ7dw" bidirectional="true" source="_hKqz0ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLjkoUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hKqz0ErUEeW3JpoJxHQ7dw" destination="_hK9uwUrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:AccessConnection" href="../CompleteSystem.aadl#aadl::complete.sys.BAC5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLjkokrUEeW3JpoJxHQ7dw" name="h_1553B -> BC.BA1" complete="true" kind="accessConnection" destination="_hK9uwErUEeW3JpoJxHQ7dw" bidirectional="true" source="_hK1L4ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLjko0rUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK1L4ErUEeW3JpoJxHQ7dw" destination="_hK9uwErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:AccessConnection" href="../CompleteSystem.aadl#aadl::complete.sys.BAC1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLjkpErUEeW3JpoJxHQ7dw" name="h_1553B -> RT.BA1" complete="true" kind="accessConnection" destination="_hK-84ErUEeW3JpoJxHQ7dw" bidirectional="true" source="_hK1L4ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLjkpUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK1L4ErUEeW3JpoJxHQ7dw" destination="_hK-84ErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:AccessConnection" href="../CompleteSystem.aadl#aadl::complete.sys.BAC2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLmn8ErUEeW3JpoJxHQ7dw" name="BC.proc_out_data -> cmu_proc.t_obc.proc_in_data" inSystemOperationMode="_hLUUEErUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hLIt4UrUEeW3JpoJxHQ7dw" source="_hK9HsErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLmn8UrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK9HsErUEeW3JpoJxHQ7dw" destination="_hLJ8AUrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC1"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLmn8krUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLJ8AUrUEeW3JpoJxHQ7dw" destination="_hLIt4UrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.DC3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLnPAErUEeW3JpoJxHQ7dw" name="BC.proc_out_data -> cmu_proc.t_ec.proc_in_data" inSystemOperationMode="_hLUUEUrUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hLJU8UrUEeW3JpoJxHQ7dw" source="_hK9HsErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLnPAUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK9HsErUEeW3JpoJxHQ7dw" destination="_hLJ8AUrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC1"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLnPAkrUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLJ8AUrUEeW3JpoJxHQ7dw" destination="_hLJU8UrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.DC4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLn2EErUEeW3JpoJxHQ7dw" name="BC.bc_out_data -> RT.proc_in_data" complete="true" kind="portConnection" destination="_hK-V0krUEeW3JpoJxHQ7dw" source="_hK9HskrUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLn2EUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK9HskrUEeW3JpoJxHQ7dw" destination="_hK-V0krUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLodIErUEeW3JpoJxHQ7dw" name="BC.bc_cmd -> RT.cmd" complete="true" kind="portConnection" destination="_hK-V00rUEeW3JpoJxHQ7dw" source="_hK9HtUrUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLodIUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK9HtUrUEeW3JpoJxHQ7dw" destination="_hK-V00rUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.EC3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLpEMErUEeW3JpoJxHQ7dw" name="RT.proc_out_data -> BC.bc_in_data" complete="true" kind="portConnection" destination="_hK9Hs0rUEeW3JpoJxHQ7dw" source="_hK-V0UrUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLpEMUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hK-V0UrUEeW3JpoJxHQ7dw" destination="_hK9Hs0rUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLq5YErUEeW3JpoJxHQ7dw" name="cmu_proc.t_obc.proc_out_data -> BC.proc_in_data" inSystemOperationMode="_hLUUEErUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hK9HsUrUEeW3JpoJxHQ7dw" source="_hLIt4ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLq5YUrUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLIt4ErUEeW3JpoJxHQ7dw" destination="_hLJ8AErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.DC1"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLq5YkrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hLJ8AErUEeW3JpoJxHQ7dw" destination="_hK9HsUrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLrgcErUEeW3JpoJxHQ7dw" name="cmu_proc.t_obc.command -> BC.proc_cmd" inSystemOperationMode="_hLUUEErUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hK9HtErUEeW3JpoJxHQ7dw" source="_hLIt40rUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLrgcUrUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLIt40rUEeW3JpoJxHQ7dw" destination="_hLJ8AkrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.EC3"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLrgckrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hLJ8AkrUEeW3JpoJxHQ7dw" destination="_hK9HtErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.EC2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLrgc0rUEeW3JpoJxHQ7dw" name="cmu_proc.t_ec.proc_out_data -> BC.proc_in_data" inSystemOperationMode="_hLUUEUrUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hK9HsUrUEeW3JpoJxHQ7dw" source="_hLJU8ErUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLrgdErUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLJU8ErUEeW3JpoJxHQ7dw" destination="_hLJ8AErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.DC2"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLrgdUrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hLJ8AErUEeW3JpoJxHQ7dw" destination="_hK9HsUrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.DC2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance xmi:id="_hLsHgErUEeW3JpoJxHQ7dw" name="cmu_proc.t_ec.command -> BC.proc_cmd" inSystemOperationMode="_hLUUEUrUEeW3JpoJxHQ7dw" complete="true" kind="portConnection" destination="_hK9HtErUEeW3JpoJxHQ7dw" source="_hLJU80rUEeW3JpoJxHQ7dw">
+    <connectionReference xmi:id="_hLsHgUrUEeW3JpoJxHQ7dw" context="_hLALAErUEeW3JpoJxHQ7dw" source="_hLJU80rUEeW3JpoJxHQ7dw" destination="_hLJ8AkrUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../BusThread.aadl#BUSThread::proc.cmu.EC4"/>
+    </connectionReference>
+    <connectionReference xmi:id="_hLsHgkrUEeW3JpoJxHQ7dw" context="_hKfNoErUEeW3JpoJxHQ7dw" source="_hLJ8AkrUEeW3JpoJxHQ7dw" destination="_hK9HtErUEeW3JpoJxHQ7dw">
+      <connection xsi:type="aadl2:PortConnection" href="../CompleteSystem.aadl#aadl::complete.sys.EC2"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode xmi:id="_hLUUEErUEeW3JpoJxHQ7dw" name="cmu_proc.controlling" currentMode="_hLFDgErUEeW3JpoJxHQ7dw"/>
+  <systemOperationMode xmi:id="_hLUUEUrUEeW3JpoJxHQ7dw" name="cmu_proc.monitoring" currentMode="_hLFDgUrUEeW3JpoJxHQ7dw"/>
+  <systemImplementation href="../CompleteSystem.aadl#aadl::complete.sys"/>
+</instance:SystemInstance>
